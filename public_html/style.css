@@ -32,6 +32,21 @@ nav {
 #calendar .input-group {
   margin: 20px 0;
 }
+.popover {
+  min-width: 200px;
+}
+
+.btn-unavailable {
+  background-color: #eee;
+  border-color: 1px solid #ddd;
+  color: #bbb;
+}
+
+.btn-unavailable:hover {
+  background-color: #ddd;
+  border-color: 1px solid #ccc;
+  color: #aaa;
+}
 
 /******************************* FOOTER *******************************/
 

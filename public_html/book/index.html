@@ -123,13 +123,15 @@
         var buffer = '<h2><span class="text-muted">Step 1:</span> Select a time to play</h2>:';
         var last_date = null;
         var times = {};
-        for (index in response) {
-          date = new Date(response[index]);
+        console.log(response);
+        for (datestring in response) {
+          date = new Date(datestring);
           if (as_customDateString(date) in times) {
-            times[as_customDateString(date)].push(as_timeString(date));
+            times[as_customDateString(date)][as_timeString(date)] = response[datestring];
           }
           else {
-            times[as_customDateString(date)] = [as_timeString(date)];
+            times[as_customDateString(date)] = {}
+            times[as_customDateString(date)][as_timeString(date)] = response[datestring];
           }
         }
         console.log(times);
@@ -141,7 +143,13 @@
                           '</div>' +
                           '<div class="panel-body">';
           for (time in times[date]) {
-            buffer += '<button class="btn btn-primary btn-lg">' + times[date][time] + '</button>';
+            if (times[date][time] == 0) {
+              buffer += '<button class="btn btn-primary btn-lg" onclick="set_booking_time(\''+date+'\',\''+time+'\')">' + time + '</button>';
+            }
+            else {
+              buffer += '<a tabindex="0" role="button" class="btn btn-unavailable btn-lg" data-trigger="focus" title="Session unavailable" data-toggle="popover" data-content="Sorry this session has already been booked">' + time + '</a>';
+            }
+
           }
           buffer += '</div>' +
                   '</div>' +
@@ -150,6 +158,13 @@
         buffer += '<h2><span class="text-muted">Step 2:</span> Enter your details</h2>:';
         area.html(buffer);
         area.append($("#booking_form").html());
+        $(function () {
+          $('[data-toggle="popover"]').popover()
+        })
+      }
+
+      function set_booking_time(date, time) {
+        alert(date+time);
       }
 
       function submit_booking() {
