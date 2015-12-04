@@ -1,0 +1,26 @@
+{
+  "name": "thelockedroom",
+  "version": "0.0.0",
+  "description": "Public site with info and bookings for The Locked Room",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/markjones112358/website-bootstrap.git"
+  },
+  "keywords": [
+    "lockedroom"
+  ],
+  "author": "Mark H. Jones",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/markjones112358/website-bootstrap/issues"
+  }
+}
