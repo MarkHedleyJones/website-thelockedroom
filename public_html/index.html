@@ -38,7 +38,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/book/">Make a <b>booking</b></a></li>
+            <li><a href="javascript:void(0);" onclick="bookingButton.start();">Make a <b>booking</b></a></li>
             <!-- <li></li> -->
             <li><a href="#finding-us">Contact us</a></li>
             <li><a href="#faqs">FAQs</a></li>
@@ -50,7 +50,7 @@
      <div class="container marketing">
       <!-- Three columns of text below the carousel -->
       <div class="row">
-        <div class="col-lg-4">
+        <div class="col-sm-4" style="text-align: center">
           <img src="icon_lock.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
           <h2>Puzzles</h2>
           <p>
@@ -58,7 +58,7 @@
             You will need to work together, thinking outside the box, to escape the room in time.
           </p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
+        <div class="col-sm-4" style="text-align: center">
           <img src="icon_team.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
           <h2>Teamwork</h2>
           <p>
@@ -66,7 +66,7 @@
             Effective teamwork will ensure you keep up with the pace.
           </p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
+        <div class="col-sm-4" style="text-align: center">
           <img src="icon_time.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
           <h2>Time</h2>
           <p>
@@ -94,12 +94,13 @@
           <p class="lead">
             Step back into the 1950s; an era of covert operations and encrypted secrets.
             Your team located the enemy&rsquo;s hidden operations room.
-            The door locks behing you, its a trap. <b>Escape before you're caught!</b>
+            The door locks behind you, its a trap. <b>Escape before you're caught!</b>
           </p>
-          <a class="btn btn-success btn-lg booknow" href="/book/" role="button">Book now</a>
+          <a class="btn btn-success btn-lg booknow" href="javascript:void(0);" onclick="bookingButton.start();" role="button">Book now</a>
+          <a class="btn btn-success btn-lg booknow" href="javascript:void(0);" onclick="voucherButton.start();" role="button">Purchase as a gift</a>
         </div>
         <div class="col-md-4">
-          <img class="featurette-image img-responsive" src="roomImage.png" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive" src="roomImage.png" alt="Radio tower transmitting">
         </div>
       </div>
     </div>
@@ -224,8 +225,8 @@
             <h3>Are we really trapped inside the room?</h3>
           </div>
           <div class="panel-body">
-            No. You will be shown the emergency exit before you start the locked room.
-            You can leave at any time without having to solve puzzles.
+            No. You will be shown the emergency exit before you start The Locked Room.
+            You can leave at any time.
           </div>
         </div>
       </div>
@@ -245,12 +246,10 @@
       <div class="col-md-3 text-center">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3>What age groups is the game suited to?</h3>
+            <h3>What age group is the game suited to?</h3>
           </div>
           <div class="panel-body">
-            People of all ages are able to play.
-            The material in the rooms is suitable for all ages.
-            Some of the puzzles can be quite challenging so it is recommended that at least one person over 16 years of age be present.
+            The puzzles can be quite challenging so we recommended participants be aged sixteen years and above.
           </div>
         </div>
       </div>
@@ -285,6 +284,9 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="dist/js/bootstrap.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script id="timelyScript" src="//book.gettimely.com/widget/book-button-v1.2.js"></script>
+    <script> var bookingButton = new timelyButton('thelockedroom', {"dontCreateButton":true});</script> 
+    <script> var voucherButton = new timelyButton('thelockedroom', {"isPurchaseButton":true,"dontCreateButton":true});</script> 
 
     <script type="text/javascript">
       function initialize() {
