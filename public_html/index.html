@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Locked Room - Taupo - New Zealand</title>
     <meta name="google-site-verification" content="_B3EIKolhkP3tDtIOrfTgeEiu3lQcXN4HPWCrFTvOnw" />
+    <meta property="og:url"           content="http://thelockedroom.co.nz" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="The Locked Room - Taupo" />
+    <meta property="og:description"   content="Taupo's only real life escape game where you are locked in a room and must solve puzzles in order to escape." />
+    <meta property="og:image"         content="http://thelockedroom.co.nz/imgs/Logo.png" />
     <!-- Bootstrap -->
     <link href="/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="/style.css" rel="stylesheet">
@@ -17,6 +22,8 @@
     <![endif]-->
   </head>
   <body>
+    <!-- For Facebook -->
+    <div id="fb-root"></div>
 
     <!-- NAVIGATION -->
 
@@ -172,11 +179,10 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-              Location
+              Location - New Zealand
             </div>
             <div class="panel-body" style="text-align: center">
-              95 Horomatangi Street<br>
-              Taupo, New Zealand<br>
+              95 Horomatangi Street, Taupo<br>
               <b>(behind the Caltex Service Station)</b>
             </div>
             <div style="text-align: center">
@@ -209,22 +215,44 @@
           </div>
         </div>
 
-        <div class="col-md-12">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-              Social
-            </div>
-            <div class="panel-body">
-              <a href="https://www.tripadvisor.co.nz/Attraction_Review-g255113-d9728199-Reviews-The_Locked_Room-Taupo_Taupo_District_Waikato_Region_North_Island.html">Tripadvisor</a><br>
-              <a href="https://www.facebook.com/The-Locked-Room-901044863324449">Facebook</a>
+      </div>
 
+    </div>
+    <hr class="featurette-divider">
+
+    <div class="container faqs">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+            Find us on social media sites
+          </div>
+          <div class="panel-body" style="vertical-align: middle; text-align: center">
+
+            <div style="display: inline-block">
+              <a href="https://www.tripadvisor.co.nz/Attraction_Review-g255113-d9728199-Reviews-The_Locked_Room-Taupo_Taupo_District_Waikato_Region_North_Island.html">
+                Tripadvisor
+              </a>
+
+
+              <div id="TA_socialButtonBubbles944" class="TA_socialButtonBubbles" style="display: inline-block; vertical-align: middle">
+                <ul id="obMN3HyA" class="TA_links 3S5mpje8">
+                  <li id="0jazvdDOH1" class="KO4Yz5n">
+                    <a target="_blank" href="https://www.tripadvisor.co.nz/Attraction_Review-g255113-d9728199-Reviews-The_Locked_Room-Taupo_Taupo_District_Waikato_Region_North_Island.html"><img src="https://www.tripadvisor.co.nz/img/cdsi/img2/branding/socialWidget/20x28_green-21693-2.png"/></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div style="display: inline-block">
+              <a style="margin-left: 20px" href="https://www.facebook.com/The-Locked-Room-901044863324449">
+                Facebook
+              </a>
+              <div style="display: inline-block; width: 130px" class="fb-like" data-href="https://www.facebook.com/The-Locked-Room-901044863324449" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
             </div>
           </div>
         </div>
-
       </div>
-
     </div>
 
     <hr class="featurette-divider">
@@ -334,7 +362,16 @@
       ga('create', 'UA-73063646-1', 'auto');
       ga('send', 'pageview');
 
+      // Facebook like stuff
 
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
     </script>
+    <script src="https://www.jscache.com/wejs?wtype=socialButtonBubbles&amp;uniq=944&amp;locationId=9728199&amp;color=green&amp;size=rect&amp;lang=en_NZ&amp;display_version=2"></script>
   </body>
 </html>
