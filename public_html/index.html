@@ -203,11 +203,21 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-              Location - New Zealand
+              Location - Taupo - New Zealand
             </div>
             <div class="panel-body" style="text-align: center">
-              95 Horomatangi Street, Taupo<br>
-              <span style="font-weight: 700">(behind the Caltex Service Station)</span>
+              <p>
+                95 Horomatangi Street
+              </p>
+              <p>
+                Cnr Horomatangi &amp; Titiraupenga Streets<br>
+                <span style="font-weight: 500">Behind Caltex Service Station</span><br>
+                <span style="font-weight: 500">Look for the Locked Room sign</span><br>
+              </p>
+              <p>
+                A <span style="font-weight: 700">10 min walk</span> from Taupo info-centre<br>
+              </p>
+
             </div>
 <!--             <div style="text-align: center">
               <img src="/imgs/ContainerPhoto.JPG" style="width: 90%" alt="Our premises - shipping container"/>
@@ -364,8 +374,9 @@
       function initialize() {
         var mapCanvas = document.getElementById('map-canvas');
         var ourLatLang = new google.maps.LatLng(-38.687832,176.074487);
+        var mapCentre = new google.maps.LatLng(-38.687481, 176.071260);
         var mapOptions = {
-          center: ourLatLang,
+          center: mapCentre,
           scrollwheel: false,
           zoom: 17,
           mapTypeId: google.maps.MapTypeId.ROADMAP
