@@ -122,7 +122,7 @@
             Step back into the 1950s; an era of covert operations and encrypted secrets. Your team has located the enemy’s hidden operations room. The door locks behind you and you are trapped.... Can you solve the puzzles, disable the alarm and <span style="font-weight: 700">escape before you're caught</span>?
           </p>
           <div style="text-align: center">
-          <span style="font-weight: 700; font-size: 1.3em">$25&mdash;$35 per person </span><button class="btn btn-success btn-lg booknow" href="javascript:void(0);" onclick="bookingButton.start();" role="button">Book now</button>
+          <!-- <span style="font-weight: 700; font-size: 1.3em">$25&mdash;$35 per person </span><button class="btn btn-success btn-lg booknow" href="javascript:void(0);" onclick="bookingButton.start();" role="button">Book now</button> -->
           </div>
           <!-- <a class="btn btn-success btn-lg booknow" href="javascript:void(0);" onclick="voucherButton.start();" role="button">Purchase as a gift</a> -->
         </div>
@@ -185,7 +185,7 @@
 
     <hr class="featurette-divider">
 
-    <div class="container">
+    <!-- <div class="container">
 
       <h1><a id="finding-us">Finding Us:</a></h1>
 
@@ -219,13 +219,8 @@
               </p>
 
             </div>
-<!--             <div style="text-align: center">
-              <img src="/imgs/ContainerPhoto.JPG" style="width: 90%" alt="Our premises - shipping container"/>
-            </div> -->
-          </div>
-        </div>
 
-<!--         <div class="col-md-12">
+          <div class="col-md-12">
           <div class="panel panel-default">
             <div class="panel-heading">
               <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
@@ -235,7 +230,7 @@
               027 243 8688
             </div>
           </div>
-        </div> -->
+        </div>
 
         <div class="col-md-12">
           <div class="panel panel-default">
@@ -252,7 +247,9 @@
       </div>
 
     </div>
-    <hr class="featurette-divider">
+
+
+    <hr class="featurette-divider"> -->
 
     <div class="container">
       <div class="col-md-6 col-md-offset-3">
@@ -390,6 +387,30 @@
       </div>
     </div>
 
+  <!-- Modal -->
+  <div class="modal fade" id="modal-closedMessage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Sorry, We've Temporarily Closed</h4>
+        </div>
+        <div class="modal-body">
+            As of the 14th of April we are <strong>not accepting any more bookings</strong>.<br>
+            We hope to open again soon so make sure to check back in future.<br>
+            <br>
+            <p>
+              Check out some other <a href="http://www.greatlaketaupo.com/things-to-do/">things to do in Taupo</a>.
+            </p>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
     <!-- FOOTER -->
 
@@ -453,7 +474,12 @@
         js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
+
     </script>
     <script src="https://www.jscache.com/wejs?wtype=socialButtonBubbles&amp;uniq=944&amp;locationId=9728199&amp;color=green&amp;size=rect&amp;lang=en_NZ&amp;display_version=2"></script>
+
+    <script type="text/javascript">
+      $('#modal-closedMessage').modal();
+    </script>
   </body>
 </html>
