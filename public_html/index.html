@@ -67,8 +67,8 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <!-- <li><a href="javascript:void(0);" onclick="bookingButton.start();">Make a <span style="font-weight:700">booking</span></a></li> -->
-            <!-- <li></li> -->
+            <li><a href="javascript:void(0);" onclick="bookingButton.start();">Make a <span style="font-weight:700">booking</span></a></li>
+            <li></li>
             <li><a href="#finding-us">Contact us</a></li>
             <li><a href="#faqs">FAQs</a></li>
           </ul>
@@ -123,7 +123,7 @@
             Step back into the 1950s; an era of covert operations and encrypted secrets. Your team has located the enemy’s hidden operations room. The door locks behind you and you are trapped.... Can you solve the puzzles, disable the alarm and <span style="font-weight: 700">escape before you're caught</span>?
           </p>
           <div style="text-align: center">
-          <!-- <span style="font-weight: 700; font-size: 1.3em">$25&mdash;$35 per person </span><button class="btn btn-success btn-lg booknow" href="javascript:void(0);" onclick="bookingButton.start();" role="button">Book now</button> -->
+          <span style="font-weight: 700; font-size: 1.3em">$25&mdash;$35 per person </span><button class="btn btn-success btn-lg booknow" href="javascript:void(0);" onclick="bookingButton.start();" role="button">Book now</button>
           </div>
           <!-- <a class="btn btn-success btn-lg booknow" href="javascript:void(0);" onclick="voucherButton.start();" role="button">Purchase as a gift</a> -->
         </div>
@@ -230,42 +230,37 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-              Location - Somewhere in New Zealand
+              Location: Taupo, New Zealand
             </div>
 
             <div class="panel-body" style="text-align: center">
               <p>
-                The Locked Room is moving.
-                Once we've got the room setup and ready, we&rsquo;ll be taking bookings.
+                <a href="http://www.claybreaktaupo.co.nz/">Clay Break Taupo</a><br>
+                1134 Poihipi Road,<br>
+                Taupo
               </p>
             </div>
           </div>
         </div>
 
-        <!-- <div class="col-md-12">
+        <div class="col-md-12">
           <div class="panel panel-default">
             <div class="panel-heading">
               <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
-              Phone
+              Phone:
             </div>
-            <div class="panel-body">
-              027 243 8688
+            <div class="panel-body" style="text-align: center">
+              0800 252 9273
             </div>
           </div>
-        </div> -->
+        </div>
 
         <div class="col-md-12">
           <div class="panel panel-default">
             <div class="panel-heading">
               <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-              Email us direct:
+              Email direct:
             </div>
-            <p style="text-align: center; margin: 20px">
-            Please note: The Locked room is moving, but has not yet opened.
-            </p>
-            <p style="text-align: center; margin: 20px; font-weight: 700">
-            Watch this space!
-            </p>
             <div class="panel-body" style="text-align: center">
               <a href="mailto:play@thelockedroom.co.nz">play@thelockedroom.co.nz</a>
             </div>
@@ -445,7 +440,7 @@
         <div class="container-fluid">
           <img src="logo.png" alt="The Locked Room">
           <div class="text-muted pull-right">
-            Copyright 2016 The Locked Room
+            Copyright 2017 The Locked Room
           </div>
         </div>
     </footer>
@@ -455,9 +450,9 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="dist/js/bootstrap.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <script id="timelyScript" src="//book.gettimely.com/widget/book-button-v1.2.js"></script>
-
-    <script> var bookingButton = new timelyButton("thelockedroom", {"dontCreateButton":true, "location":"50506","category":"46553"});</script>
+    <!-- <script id="timelyScript" src="//book.gettimely.com/widget/book-button-v1.2.js"></script> -->
+    <script id="timelyScript" src="//book.gettimely.com/widget/book-button-v1.3.js"></script>
+    <script> var bookingButton = new timelyButton("thelockedroom1", {"dontCreateButton":true, "location":"82610","category":"155529"});</script>
     <!-- <script> var bookingButton = new timelyButton('thelockedroom', {"dontCreateButton":true});</script> -->
     <!-- <script> var voucherButton = new timelyButton('thelockedroom', {"isPurchaseButton":true,"dontCreateButton":true});</script> -->
 
@@ -467,22 +462,24 @@
         // Taupo Details
         // var ourLatLang = new google.maps.LatLng(-38.687832,176.074487);
         // var mapCentre = new google.maps.LatLng(-38.687481, 176.071260);
-        var ourLatLang = new google.maps.LatLng(-37.688092, 176.165009);
-        var mapCentre = new google.maps.LatLng(-37.688092, 176.165009);
+        // var ourLatLang = new google.maps.LatLng(-37.688092, 176.165009);
+        // var mapCentre = new google.maps.LatLng(-37.688092, 176.165009);
+        var ourLatLang = new google.maps.LatLng(-38.604836, 175.994644);
+        var mapCentre = new google.maps.LatLng(-38.604836, 175.994644);
 
         var mapOptions = {
           center: mapCentre,
           scrollwheel: false,
-          zoom: 7,
+          zoom: 10,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         }
         var map = new google.maps.Map(mapCanvas, mapOptions);
 
-        // var marker = new google.maps.Marker({
-        //   position: ourLatLang,
-        //   map: map,
-        //   title:"Locked Room Taupo"
-        // });
+        var marker = new google.maps.Marker({
+          position: ourLatLang,
+          map: map,
+          title:"Locked Room Taupo"
+        });
 
         marker.setMap(map);
       }
@@ -509,8 +506,8 @@
     </script>
     <script src="https://www.jscache.com/wejs?wtype=socialButtonBubbles&amp;uniq=944&amp;locationId=9728199&amp;color=green&amp;size=rect&amp;lang=en_NZ&amp;display_version=2"></script>
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       $('#modal-closedMessage').modal();
-    </script>
+    </script> -->
   </body>
 </html>
