@@ -124,6 +124,7 @@
           </p>
           <div style="text-align: center">
           <span style="font-weight: 700; font-size: 1.3em">$25&mdash;$35 per person </span><button class="btn btn-success btn-lg booknow" href="javascript:void(0);" onclick="bookingButton.start();" role="button">Book now</button>
+
           </div>
           <!-- <a class="btn btn-success btn-lg booknow" href="javascript:void(0);" onclick="voucherButton.start();" role="button">Purchase as a gift</a> -->
         </div>
@@ -450,11 +451,8 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="dist/js/bootstrap.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <!-- <script id="timelyScript" src="//book.gettimely.com/widget/book-button-v1.2.js"></script> -->
-    <script id="timelyScript" src="//book.gettimely.com/widget/book-button-v1.3.js"></script>
-    <script> var bookingButton = new timelyButton("thelockedroom1", {"dontCreateButton":true, "location":"82610","category":"155529"});</script>
-    <!-- <script> var bookingButton = new timelyButton('thelockedroom', {"dontCreateButton":true});</script> -->
-    <!-- <script> var voucherButton = new timelyButton('thelockedroom', {"isPurchaseButton":true,"dontCreateButton":true});</script> -->
+    <script id="timelyScript" src="//book.gettimely.com/widget/book-button-v1.4.js"></script>
+    <script> var bookingButton = new timelyButton("thelockedroom1", {"location":"82610","staff":"155529","style":"dark"});</script>
 
     <script type="text/javascript">
       function initialize() {
